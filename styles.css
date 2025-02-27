@@ -1,0 +1,243 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    background-image: url('img/fondo1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header, footer, .social-donate, .nosotros, .programas {
+    background-color: rgba(255, 255, 255, 0.6); /* Aumentamos la transparencia */
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px auto; /* Centramos el header y footer */
+    width: 95%; /* Ajustamos el ancho para que coincida con el footer y header */
+    max-width: 1200px; /* Limitamos el ancho máximo */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header img {
+    height: 50px;
+}
+
+.header-left, .header-center, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    margin: 10px 0;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#reproductor {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#reproductor iframe {
+    width: 100%;
+    height: 56.25vw;
+    max-height: 80vh;
+    border: none;
+    border-radius: 10px;
+}
+
+.social-donate {
+    display: flex;
+    justify-content: space-between;
+    width: 95%; /* Ajustamos el ancho para que coincida con el footer y header */
+    max-width: 1200px; /* Limitamos el ancho máximo */
+    margin-top: 20px;
+}
+
+.social, .donate {
+    display: flex;
+    flex-direction: row; /* Cambiamos a fila para que los logos estén uno al lado del otro */
+    align-items: center;
+    gap: 20px; /* Aumentamos el espacio entre los logos */
+}
+
+.social h3, .donate h3 {
+    margin: 0;
+    color: #333;
+}
+
+.social img, .donate img {
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+.social img:hover, .donate img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6); /* Aumentamos la transparencia */
+    width: 95%; /* Ajustamos el ancho para que coincida con el header */
+    max-width: 1200px; /* Limitamos el ancho máximo */
+    margin: 10px auto; /* Centramos el footer */
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Estilos para la sección de donaciones */
+.donate {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Para que los botones se ajusten en pantallas pequeñas */
+}
+
+.donate h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.donate-logo {
+    height: 40px; /* Tamaño de los logos */
+    transition: transform 0.2s ease;
+}
+
+.donate-logo:hover {
+    transform: scale(1.1); /* Efecto de hover */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-right {
+        margin-top: 10px;
+    }
+
+    #menu {
+        top: 100px;
+    }
+
+    #reproductor iframe {
+        height: 50vh;
+    }
+
+    .social-donate {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social, .donate {
+        flex-direction: column; /* En móviles, los logos se apilan verticalmente */
+    }
+
+    .donate {
+        gap: 10px; /* Reducir el espacio entre botones en móviles */
+    }
+}
+
+/* Estilo para el botón hamburguesa */
+#menu-toggle {
+    background-color: #294c6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20%; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#menu-toggle:hover {
+    background-color: #0f263f;
+}
+/* Estilos para la sección de Programas/Horarios */
+#programas {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#toggle-horarios {
+    background-color: #294c6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggle-horarios:hover {
+    background-color: #0f263f;
+}
+
+#horarios-imagen {
+    margin-top: 20px;
+}
+
+#horarios-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

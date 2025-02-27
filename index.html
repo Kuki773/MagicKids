@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Kids Tv</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="#reproductor">
+                <img src="img/logomagic.png" alt="TV Vivo">
+            </a>
+        </div> 
+        
+        <div class="header-right">
+            <button id="menu-toggle">☰</button>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#reproductor">NOSOTROS</a></li>
+                    <li><a href="#programas">PROGRAMAS/HORARIOS</a></li>
+                    <li><a href="#redes">REDES</a></li>
+                    <li><a href="#dona">DONÁ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="reproductor">
+            <iframe 
+                src="https://www.youtube.com/embed/videoseries?list=PLX3YE0ErcWgtzx1-wQDwFp0mrZ4an0u--&autoplay=1&loop=1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <div class="social-donate">
+            <div class="social" id="redes">
+                <h3>Seguinos</h3>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+            <div class="donate" id="dona">
+                <h3>Apoya nuestro trabajo</h3>
+                <!-- Botón de Cafecito -->
+                <a href='https://cafecito.app/kukidesing' rel='noopener' target='_blank'>
+                    <img 
+                        srcset='
+                            https://cdn.cafecito.app/imgs/buttons/button_4.png 1x, 
+                            https://cdn.cafecito.app/imgs/buttons/button_4_2x.png 2x, 
+                            https://cdn.cafecito.app/imgs/buttons/button_4_3.75x.png 3.75x'
+                        src='https://cdn.cafecito.app/imgs/buttons/button_4.png' 
+                        alt='Invitame un café en cafecito.app' 
+                        class="donate-logo"
+                    />
+                </a>
+                <!-- Botón de PayPal -->
+                <a href="https://www.paypal.com/donate/?hosted_button_id=J59RPVZZUCR8N" target="_blank">
+                    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate with PayPal" class="donate-logo">
+                </a>
+                <!-- Botón de Mercado Pago -->
+                <a href="https://link.mercadopago.com.ar/kukidesing" target="_blank">
+                    <img src="img/logos/mp.jpg" alt="Mercado Pago" class="donate-logo">
+                </a>
+            </div>
+        </div>
+
+        <section id="nosotros" class="nosotros">
+            <div>
+                <h1>Nosotros</h1>
+                <p>
+                    Hola. Nos re encantaba el Megic así que hicimos este canalcitito.
+                    Si nos quieren seguir o donar una platita para la causa, bienvenido sea (?) 
+                    <br>
+                    <br>
+                    En su corcel, cuando sale la luna,
+                    aparece el bravo zorro.. <br> Al hombre del mal, 
+                    Él sabrá castigar, Marcando la "Z" del Zorro.. <br>
+                    Zorro.. Zorro.. Zorro.. <br>
+                    <br> 
+                    *Ruidito de espada cortando el viento*
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección de Programas/Horarios -->
+        <section id="programas" class="programas">
+            <h2>Programas/Horarios</h2>
+            <button id="toggle-horarios">Ver Horarios</button>
+            <div id="horarios-imagen" style="display: none;">
+                <img src="img/programación.jpg" alt="Horarios de Programas">
+            </div>
+        </section>
+    
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Magic Kids Tv. Todos los derechos reservados.</p>
+        <p>Diseñado por <a href="https://kukidesign.com">Kuki Design</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
